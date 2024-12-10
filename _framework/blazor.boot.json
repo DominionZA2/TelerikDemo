@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "TelerikDemo",
   "resources": {
-    "hash": "sha256-UdSIlQFycrMLYwCd/RnkR3Pa9Q4yjAd9xKAeKLayYuE=",
+    "hash": "sha256-dW2Cn9TENCVWrbKfesGoWtEANxyHRDneG5R0Lq+f5J0=",
     "jsModuleNative": {
       "dotnet.native.8.0.11.n1sf6xr5tz.js": "sha256-VdKq87/z5NIxZKmuM+fv38XF+RcEb/bg3jVBwQSfwP4="
     },
@@ -54,12 +54,11 @@
       "System.Linq.Queryable.wasm": "sha256-nKAx1YJmal48EGZ/hnuG+h5jydqjNqbBcu9henoP3Lw=",
       "System.Linq.wasm": "sha256-uWUSNBwS0xFte1+FfHNCLF0AqfFihhQj0y/1lJW1pWA=",
       "System.Memory.wasm": "sha256-EVduMk7Y7SO807EnatuiDxl8o/RTAnqWWl830Cd8s6g=",
-      "System.Net.Http.Json.wasm": "sha256-RItvEaNhUQhEaa8OsNo2HXxxMHJSCbwhZkMGn/2r7D0=",
-      "System.Net.Http.wasm": "sha256-NAd7XQjn42cleG81cACVHntxmvlVCdul7eyiS/lfYAI=",
+      "System.Net.Http.wasm": "sha256-V3YRrLGs0B84lzjvWydlLvkbfN1vkcTjpyYD/+1lpXQ=",
       "System.Net.Primitives.wasm": "sha256-GtynZfQX9xc6KcD2sn3ncEMi2FNGKgKljAX6RbyrHjg=",
       "System.Net.WebClient.wasm": "sha256-s1wOA5aAychsNoUiiUNKqqhY72TVHqz1JZM2tRfXDgE=",
       "System.ObjectModel.wasm": "sha256-0gd33/pLc+/6AVkoigD12Bj7K19q3HDt2k0NDZpMp6w=",
-      "System.Private.CoreLib.wasm": "sha256-KfQxUb8MKkiTwNvwhQZ3kmVl34nB+l3f1kzMJGxsTig=",
+      "System.Private.CoreLib.wasm": "sha256-1JPzuxnRLBeN8Dv5qldjZCIamnPqs++0Kpff8Yf+Cvo=",
       "System.Private.Uri.wasm": "sha256-M2iZgRVE3T/k7Ot5oxn/edcfh2c4oHSNt1KhSQUdkTk=",
       "System.Private.Xml.Linq.wasm": "sha256-vOMR2RZf8Rth2qGU1pTFG6W4u1UNtHjVBrD8jHL/Hw4=",
       "System.Private.Xml.wasm": "sha256-t4TN11de8AZoxUGVD4xRFvggniu+QyvHJ+wVrxIID00=",
@@ -67,14 +66,15 @@
       "System.Reflection.Emit.wasm": "sha256-06YHPY9koMLpFoTVjCnAstRvpU2M28rFUyOyw5Iay8E=",
       "System.Reflection.Primitives.wasm": "sha256-fj3YVeDop8SSlfMupFmPZ+EegmA/0RbiXpjaeOJtA+U=",
       "System.Runtime.InteropServices.JavaScript.wasm": "sha256-JDAPztAH7y21L2xsZ6H93YRax2un44ouJesryzose0k=",
+      "System.Runtime.InteropServices.wasm": "sha256-JwXNkn5K68iUobSv8X+/6fSfmmbrb7tecmAoZR9NPkQ=",
       "System.Runtime.Loader.wasm": "sha256-jjOxVW7/gox3HD24Of+qss0wpf4ETzGfjqTRQ5VH+34=",
       "System.Runtime.Numerics.wasm": "sha256-0NXR0i/rGbrpZteYbKMU40xYs4CAh/nd/Id17a7Msqc=",
       "System.Runtime.Serialization.Formatters.wasm": "sha256-V4cTN96QE4Ax8kxrRat8H+xPao5wKV7sV3JcdGu133s=",
       "System.Runtime.Serialization.Primitives.wasm": "sha256-dX5/Tj+O+wCkFcythbpxhPR6kSYOeV5vMw7kpDk6DGY=",
-      "System.Runtime.wasm": "sha256-yv0927HHpmrgSB7gdmIdQhSPS/LBc1yF4Cbbg0U0TC8=",
+      "System.Runtime.wasm": "sha256-mD1BqBwnbC/7Qn5ixYvb6zGez0DJqUq229X8jrKSEoE=",
       "System.Security.Cryptography.wasm": "sha256-/dIiKH5jcy19hyv62K5roYoCsL+yFAjq5mnWHG4ZIvQ=",
       "System.Text.Encodings.Web.wasm": "sha256-Eq+TOED4xgKQTWKS82ya/h1BOhJ9CymWZesbhFf0aqc=",
-      "System.Text.Json.wasm": "sha256-Zp2N6oHBs8jpJoZXq8popQQwfG94CruOX/E7jr9gV/o=",
+      "System.Text.Json.wasm": "sha256-zNlxhG2TAaO6fD5CjPS2LlfvSTGmoWiJkvPd0NqYV5w=",
       "System.Text.RegularExpressions.wasm": "sha256-7i7H2c1mgYx7/96JRV6wDC10VGROVw7n5rAbPiNzDeg=",
       "System.Threading.wasm": "sha256-4C3ndI/Xg3W8vOvl13jkctoRhnF8IMqWfWFATomhvjM=",
       "System.wasm": "sha256-UsIFTsNRr1Sw/A0hEbTyYbQo5eHUNmMuOWT6/xaM3TE=",
@@ -89,7 +89,7 @@
       "Telerik.Recurrence.wasm": "sha256-BobJ/SuwwVh5EUIl4arq8n97vgyONbqrnDww3Lt//DI=",
       "Telerik.SvgIcons.wasm": "sha256-XXBcUbm5YRfeSsEnr4ki1dgRJpX+bq0EB+O9pgVoEZc=",
       "Telerik.Zip.wasm": "sha256-DcUxSMlSQyLzEKNNSYvF8umaX3qaOG+IrUv2AvFKPds=",
-      "TelerikDemo.wasm": "sha256-WhHvW/VG8ZnyApOUf1ieNPxyWyeD9A9WCiBxov8x1YE="
+      "TelerikDemo.wasm": "sha256-wcsjauOMb+wVHMbIf9jB7T5kowCvnGAGcqGtW+25fEs="
     }
   },
   "cacheBootResources": true,
