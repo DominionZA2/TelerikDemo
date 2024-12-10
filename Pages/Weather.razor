@@ -1,57 +1,83 @@
 ﻿@page "/weather"
-@inject HttpClient Http
 
-<PageTitle>Weather</PageTitle>
+<PageTitle>Telerik Blazor App | Weather</PageTitle>
 
 <h1>Weather</h1>
 
-<p>This component demonstrates fetching data from the server.</p>
+<p>This TelerikGrid demonstrates showing data.</p>
 
-@if (forecasts == null)
+@if (_forecasts == null)
 {
     <p><em>Loading...</em></p>
 }
 else
 {
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Date</th>
-                <th>Temp. (C)</th>
-                <th>Temp. (F)</th>
-                <th>Summary</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var forecast in forecasts)
-            {
-                <tr>
-                    <td>@forecast.Date.ToShortDateString()</td>
-                    <td>@forecast.TemperatureC</td>
-                    <td>@forecast.TemperatureF</td>
-                    <td>@forecast.Summary</td>
-                </tr>
-            }
-        </tbody>
-    </table>
+    <TelerikGrid Data="@_forecasts" Pageable="true" @bind-PageSize="_pageSize" @bind-Page="_currentPage">
+        <GridSettings>
+            <GridPagerSettings PageSizes="@_pageSizes" InputType="PagerInputType.Input" Adaptive="true" />
+        </GridSettings>
+        <GridColumns>
+            <GridColumn Field="Date" Title="Date" DisplayFormat="{0:MM/dd/yyyy}" />
+            <GridColumn Field="TemperatureC" Title="Temp. (C)" />
+            <GridColumn Field="TemperatureF" Title="Temp. (F)" />
+            <GridColumn Field="Summary" Title="Summary" />
+            <GridCommandColumn>
+                <GridCommandButton Command="Button1" Icon="@SvgIcon.EditAnnotations" OnClick="@((GridCommandEventArgs args) => Button1Click(args))">1</GridCommandButton>
+                <GridCommandButton Command="Button2" Icon="@SvgIcon.FileAdd" OnClick="@((GridCommandEventArgs args) => Button2Click(args))">2</GridCommandButton>
+                <GridCommandButton Command="Button3" Icon="@SvgIcon.TableDelete" OnClick="@((GridCommandEventArgs args) => Button3Click(args))">3</GridCommandButton>
+            </GridCommandColumn>
+        </GridColumns>
+    </TelerikGrid>
 }
 
 @code {
-    private WeatherForecast[]? forecasts;
+    private WeatherForecast[]? _forecasts;
+    private int _pageSize = 15;
+    private int _currentPage = 1;
+    private readonly List<int?> _pageSizes = [15, 30, null];
 
     protected override async Task OnInitializedAsync()
     {
-        forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("sample-data/weather.json");
+        // Simulate asynchronous loading to demonstrate a loading indicator
+        await Task.Delay(500);
+
+        var startDate = DateOnly.FromDateTime(DateTime.Now);
+        var summaries = new[] {
+            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching",
+            "Frigid", "Arctic", "Frosty", "Crisp", "Pleasant", "Temperate", "Sultry", "Tropical", "Humid", "Arid",
+            "Blistering", "Polar", "Icy", "Raw", "Spring-like", "Autumn-like", "Stuffy", "Muggy", "Oppressive", "Sizzling"
+        };
+        _forecasts = Enumerable.Range(1, 100).Select(index => new WeatherForecast
+            {
+                Date = startDate.AddDays(index),
+                TemperatureC = Random.Shared.Next(-20, 55),
+                Summary = summaries[Random.Shared.Next(summaries.Length)]
+            }).ToArray();
     }
 
-    public class WeatherForecast
+    private class WeatherForecast
     {
         public DateOnly Date { get; set; }
-
         public int TemperatureC { get; set; }
-
         public string? Summary { get; set; }
-
         public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
+    }
+
+    private void Button1Click(GridCommandEventArgs args)
+    {
+        var item = args.Item as WeatherForecast;
+        // Handle button 1 click
+    }
+
+    private void Button2Click(GridCommandEventArgs args)
+    {
+        var item = args.Item as WeatherForecast;
+        // Handle button 2 click
+    }
+
+    private void Button3Click(GridCommandEventArgs args)
+    {
+        var item = args.Item as WeatherForecast;
+        // Handle button 3 click
     }
 }

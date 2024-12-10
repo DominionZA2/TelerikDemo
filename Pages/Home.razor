@@ -1,7 +1,134 @@
 ﻿@page "/"
 
-<PageTitle>Home</PageTitle>
+<PageTitle>Telerik Blazor App | Home</PageTitle>
 
 <h1>Hello, world!</h1>
 
-Welcome to your new app.
+<p>Welcome to your new app.</p>
+
+<p>This project was created in VS2022 using the Telerik Blazor project template. Only CSS used besides the Aura-Portal.css style is for layout.</p>
+
+<div class="k-d-flex k-flex-col k-gap-2">
+    <TelerikCard>
+        <CardHeader>
+            <CardTitle>Button</CardTitle>
+        </CardHeader>
+        <CardBody>
+            <div class="k-flex k-gap-4 k-mb-4">
+                <TelerikButton>Default theme</TelerikButton>
+                <TelerikButton ThemeColor="@ThemeConstants.Button.ThemeColor.Primary">Primary theme color</TelerikButton>
+                <TelerikButton ThemeColor="@ThemeConstants.Button.ThemeColor.Secondary">Secondary theme color</TelerikButton>
+                <TelerikButton ThemeColor="@ThemeConstants.Button.ThemeColor.Tertiary">Tertiary theme color</TelerikButton>
+            </div>
+        </CardBody>
+    </TelerikCard>
+
+    <TelerikCard>
+        <CardHeader>
+            <CardTitle>Dropdown Button</CardTitle>
+        </CardHeader>
+        <CardBody>
+            <div class="k-flex k-gap-4 k-mb-4">
+                <TelerikDropDownButton Icon="@SvgIcon.Share">
+                    <DropDownButtonContent>Share</DropDownButtonContent>
+
+                    <DropDownButtonItems>
+                        <DropDownButtonItem Icon="@SvgIcon.Facebook">Facebook</DropDownButtonItem>
+                        <DropDownButtonItem Icon="@SvgIcon.Twitter">Twitter</DropDownButtonItem>
+                        <DropDownButtonItem Icon="@SvgIcon.Linkedin">Linkedin</DropDownButtonItem>
+                        <DropDownButtonItem Icon="@SvgIcon.Reddit">Reddit</DropDownButtonItem>
+                    </DropDownButtonItems>
+                </TelerikDropDownButton>
+
+                <TelerikDropDownButton Icon="@SvgIcon.Share" ThemeColor="@ThemeConstants.Button.ThemeColor.Primary">
+                    <DropDownButtonContent>Share</DropDownButtonContent>
+
+                    <DropDownButtonItems>
+                        <DropDownButtonItem Icon="@SvgIcon.Facebook">Facebook</DropDownButtonItem>
+                        <DropDownButtonItem Icon="@SvgIcon.Twitter">Twitter</DropDownButtonItem>
+                        <DropDownButtonItem Icon="@SvgIcon.Linkedin">Linkedin</DropDownButtonItem>
+                        <DropDownButtonItem Icon="@SvgIcon.Reddit">Reddit</DropDownButtonItem>
+                    </DropDownButtonItems>
+                </TelerikDropDownButton>
+
+                <TelerikDropDownButton Icon="@SvgIcon.Share" ThemeColor="@ThemeConstants.Button.ThemeColor.Secondary">
+                    <DropDownButtonContent>Share</DropDownButtonContent>
+
+                    <DropDownButtonItems>
+                        <DropDownButtonItem Icon="@SvgIcon.Facebook">Facebook</DropDownButtonItem>
+                        <DropDownButtonItem Icon="@SvgIcon.Twitter">Twitter</DropDownButtonItem>
+                        <DropDownButtonItem Icon="@SvgIcon.Linkedin">Linkedin</DropDownButtonItem>
+                        <DropDownButtonItem Icon="@SvgIcon.Reddit">Reddit</DropDownButtonItem>
+                    </DropDownButtonItems>
+                </TelerikDropDownButton>
+
+                <TelerikDropDownButton Icon="@SvgIcon.Share" ThemeColor="@ThemeConstants.Button.ThemeColor.Tertiary">
+                    <DropDownButtonContent>Share</DropDownButtonContent>
+
+                    <DropDownButtonItems>
+                        <DropDownButtonItem Icon="@SvgIcon.Facebook">Facebook</DropDownButtonItem>
+                        <DropDownButtonItem Icon="@SvgIcon.Twitter">Twitter</DropDownButtonItem>
+                        <DropDownButtonItem Icon="@SvgIcon.Linkedin">Linkedin</DropDownButtonItem>
+                        <DropDownButtonItem Icon="@SvgIcon.Reddit">Reddit</DropDownButtonItem>
+                    </DropDownButtonItems>
+                </TelerikDropDownButton>
+            </div>
+        </CardBody>
+    </TelerikCard>
+
+    <TelerikCard>
+        <CardHeader>
+            <CardTitle>Inputs</CardTitle>
+        </CardHeader>
+        <CardBody>
+            <div class="k-flex k-gap-4 k-mb-4">
+                <TelerikTextBox Value="TelerikTextBox" Width="12rem" />
+                <TelerikNumericTextBox T="decimal" Value="1.234567M" Width="12rem" />
+                <TelerikMaskedTextBox Value="TelerikMaskedTextBox" Width="12rem" />
+                <TelerikTextArea Value="TelerikTextArea" Width="12rem" />
+                <TelerikSwitch Value="true" />
+                <TelerikSwitch Value="false" />
+                <TelerikCheckBox Value="true" />
+                <TelerikCheckBox Value="false" />
+            </div>
+        </CardBody>
+    </TelerikCard>
+
+    <TelerikCard>
+        <CardHeader>
+            <CardTitle>Date inputs</CardTitle>
+        </CardHeader>
+        <CardBody>
+            <div class="k-flex k-gap-4 k-mb-4">
+                <TelerikDatePicker Value="DateTime.Now" Width="20rem" />
+                <TelerikTimePicker Value="DateTime.Now" Width="20rem" />
+                <TelerikDateTimePicker Value="DateTime.Now" Width="20rem" />
+            </div>
+        </CardBody>
+    </TelerikCard>
+
+    <TelerikCard>
+        <CardHeader>
+            <CardTitle>Dropdowns</CardTitle>
+        </CardHeader>
+        <CardBody>
+            <div class="k-flex k-gap-4 k-mb-4">
+                <TelerikDropDownList TItem="string" TValue="string" Data="@(new List<string> { "TelerikDropDownList 1", "TelerikDropDownList 2", "TelerikDropDownList 3" })" Width="20rem" />
+                <TelerikComboBox TItem="string" TValue="string" Data="@(new List<string> { "TelerikComboBox 1", "TelerikComboBox 2", "TelerikComboBox 3" })" Width="20rem" />
+                <TelerikMultiSelect TItem="string" TValue="string" Data="@(new List<string> { "TelerikMultiSelect 1", "TelerikMultiSelect 2", "TelerikMultiSelect 3" })" Width="30rem" />
+            </div>
+        </CardBody>
+    </TelerikCard>
+
+    <TelerikCard>
+        <CardHeader>
+            <CardTitle>Important links</CardTitle>
+        </CardHeader>
+        <CardBody>
+            <ul>
+                <li><a href="https://docs.telerik.com/themebuilder/plugin/exporting-components" target="_blank">Exporting Components - Telerik ThemeBuilder</a></li>
+                <li><a href="https://themebuilderapp.telerik.com/projects/6698cf956955cd20e0925e12" target="_blank">Telerik ThemeBuilder Project</a></li>
+            </ul>
+        </CardBody>
+    </TelerikCard>
+</div>
