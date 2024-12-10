@@ -1,0 +1,31 @@
+name: Deploy to GitHub Pages
+
+env:
+  PUBLISH_DIR: bin/Release/net8.0/publish/wwwroot
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '8.0.x'
+    
+    - name: Publish app
+      run: dotnet publish -c Release
+      env:
+        TELERIK_USERNAME: ${{ secrets.TELERIK_USERNAME }}
+        TELERIK_PASSWORD: ${{ secrets.TELERIK_PASSWORD }}
+    
+    - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@4.1.4
+      with:
+        branch: gh-pages
+        folder: ${{ env.PUBLISH_DIR }}
