@@ -1,0 +1,29 @@
+﻿@page "/form"
+@using TelerikDemo.Models
+
+<PageTitle>Cosoft | Form</PageTitle>
+
+<h1>Form demo</h1>
+
+<ul>
+    <li>Layout goes haywire on the Aura Portal theme. On default, it appears as intended.</li>
+</ul>
+
+<TelerikForm Model="@_formModel">
+    <FormItems>
+        <FormItem Field="@nameof(FormModel.FirstName)" LabelText="First name" />
+        <FormItem Field="@nameof(FormModel.LastName)" LabelText="Last name" />
+        <FormItem Field="@nameof(FormModel.Phone)" LabelText="Phone" />
+        <FormItem Field="@nameof(FormModel.Email)" LabelText="Email" />
+    </FormItems>
+</TelerikForm>
+
+@code {
+    private FormModel _formModel = new FormModel
+    {
+        FirstName = "Joe",
+        LastName = "Doe",
+        Email = "joe@doe.there",
+        Phone = "10810"
+    };
+}
