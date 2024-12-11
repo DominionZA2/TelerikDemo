@@ -28,10 +28,10 @@ else
             <GridColumn Field="TemperatureF" Title="Temp. (F)" />
             <GridColumn Field="Summary" Title="Summary" />
             <GridCommandColumn>
-                <GridCommandButton Icon="@SvgIcon.Pencil" OnClick="@((GridCommandEventArgs args) => Button1Click(args))" Title="This is the default tooltip appearance">1</GridCommandButton>
-                <GridCommandButton Icon="@SvgIcon.StickyNote" OnClick="@((GridCommandEventArgs args) => Button2Click(args))" Title="This is the default tooltip appearance">2</GridCommandButton>
-                <GridCommandButton Icon="@SvgIcon.TableDelete" OnClick="@((GridCommandEventArgs args) => Button3Click(args))" Title="This is the default tooltip appearance">3</GridCommandButton>
-                <GridCommandButton Icon="@SvgIcon.TableDelete" OnClick="@((GridCommandEventArgs args) => Button3Click(args))" Title="This is the default tooltip appearance for a disabled button" Enabled="false">3D</GridCommandButton>
+                <GridCommandButton OnClick="@((GridCommandEventArgs args) => Button1Click(args))" Title="This is the default tooltip appearance">Edit</GridCommandButton>
+                <GridCommandButton OnClick="@((GridCommandEventArgs args) => Button2Click(args))" Title="This is the default tooltip appearance">Save</GridCommandButton>
+                <GridCommandButton Icon="@SvgIcon.Pencil" OnClick="@((GridCommandEventArgs args) => Button3Click(args))" Title="This is the default tooltip appearance">D</GridCommandButton>
+                <GridCommandButton Icon="@SvgIcon.Pencil" OnClick="@((GridCommandEventArgs args) => Button3Click(args))" Title="This is the default tooltip appearance for a disabled button" Enabled="false">D</GridCommandButton>
             </GridCommandColumn>
         </GridColumns>
     </TelerikGrid>
