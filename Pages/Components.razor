@@ -2,6 +2,17 @@
 
 <PageTitle>Cosoft | Components</PageTitle>
 
+@* <TelerikCard>
+    <CardHeader>
+        <CardTitle></CardTitle>
+    </CardHeader>
+    <CardBody>
+        <div class="d-flex gap-2 mb-2">
+
+        </div>
+    </CardBody>
+</TelerikCard> *@
+
 <div class="d-flex flex-column gap-2">
     <TelerikCard>
         <CardHeader>
@@ -50,7 +61,7 @@
             </div>
         </CardBody>
     </TelerikCard>
-    
+
     <TelerikCard>
         <CardHeader>
             <CardTitle>Split button</CardTitle>
@@ -251,6 +262,30 @@
             <div class="d-flex gap-2 mb-2">
                 <TelerikMultiSelect TItem="string" TValue="string" Data="@(new List<string> { "TelerikMultiSelect 1", "TelerikMultiSelect 2", "TelerikMultiSelect 3" })" Width="30rem" />
                 <TelerikMultiSelect TItem="string" TValue="string" Data="@(new List<string> { "TelerikMultiSelect 1", "TelerikMultiSelect 2", "TelerikMultiSelect 3" })" Width="30rem" Enabled="false" />
+            </div>
+        </CardBody>
+    </TelerikCard>
+    
+    <TelerikCard>
+        <CardHeader>
+            <CardTitle>Color stuff</CardTitle>
+        </CardHeader>
+        <CardBody>
+            <div class="d-flex flex-column gap-2 mb-2">
+                <h6>TelerikColorPicker</h6>
+                <TelerikColorPicker />
+            </div>
+            <div class="d-flex flex-column gap-2 mb-2">
+                <h6>TelerikColorGradient</h6>
+                <TelerikColorGradient/>
+            </div>
+            <div class="d-flex flex-column gap-2 mb-2">
+                <h6>TelerikFlatColorPicker</h6>
+                <TelerikFlatColorPicker/>
+            </div>
+            <div class="d-flex flex-column gap-2 mb-2">
+                <h6>TelerikColorPalette</h6>
+                <TelerikColorPalette/>
             </div>
         </CardBody>
     </TelerikCard>
