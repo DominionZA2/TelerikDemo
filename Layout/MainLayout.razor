@@ -1,5 +1,7 @@
 ﻿@inherits LayoutComponentBase
 
+@inject IJSRuntime JsInterop
+
 <TelerikRootComponent IconType="@IconType.Svg">
     <div class="page">
         <div class="sidebar">
@@ -8,7 +10,7 @@
 
         <main>
             <div class="top-row px-4">
-                <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
+                <TelerikButton OnClick="ChangeTheme">Toggle theme</TelerikButton>
             </div>
 
             <article class="content px-4">
@@ -23,3 +25,18 @@
         <a class="dismiss">🗙</a>
     </div>
 </TelerikRootComponent>
+
+@code {
+    protected  override  async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JsInterop.InvokeVoidAsync("themeChanger.firstRender");
+        }
+    }
+  
+    async Task ChangeTheme()
+    {
+        await JsInterop.InvokeVoidAsync("themeChanger.changeCss", false);
+    }
+}
