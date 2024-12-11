@@ -36,6 +36,12 @@
                 <TelerikButton ThemeColor="@ThemeConstants.Button.ThemeColor.Tertiary" Enabled="false">Tertiary theme color disabled</TelerikButton>
             </div>
         </CardBody>
+        <CardFooter>
+            <ul>
+                <li>Primary theme color is not right. <p style="color: white; background-color: #3089CE">Should be #3089CE</p></li>
+                <li>Tertiary theme color is not used in the system. Some places require black font, and white background. Maybe this is a use case for Tertiary?</li>
+            </ul>
+        </CardFooter>
     </TelerikCard>
 
     <TelerikCard>
@@ -60,6 +66,11 @@
                 <TelerikChip ThemeColor="@ThemeConstants.Button.ThemeColor.Tertiary" Disabled="true">Tertiary theme color disabled</TelerikChip>
             </div>
         </CardBody>
+        <CardFooter>
+            <ul>
+                <li>No themes configured here it seems</li>
+            </ul>
+        </CardFooter>
     </TelerikCard>
 
     <TelerikCard>
@@ -84,6 +95,12 @@
                 <TelerikSplitButton ThemeColor="@ThemeConstants.Button.ThemeColor.Tertiary" Enabled="false">Tertiary theme color disabled</TelerikSplitButton>
             </div>
         </CardBody>
+        <CardFooter>
+            <ul>
+                <li>Primary theme color is not right</li>
+                <li>The dropdown button and input sections are not aligned</li>
+            </ul>
+        </CardFooter>
     </TelerikCard>
 
     <TelerikCard>
@@ -93,7 +110,7 @@
         <CardBody>
             <div class="d-flex gap-2 mb-2">
                 <TelerikDropDownButton Icon="@SvgIcon.Share">
-                    <DropDownButtonContent>Primary theme color</DropDownButtonContent>
+                    <DropDownButtonContent>Default theme color</DropDownButtonContent>
 
                     <DropDownButtonItems>
                         <DropDownButtonItem Icon="@SvgIcon.Facebook">Facebook</DropDownButtonItem>
@@ -104,7 +121,7 @@
                 </TelerikDropDownButton>
 
                 <TelerikDropDownButton Icon="@SvgIcon.Share" Enabled="false">
-                    <DropDownButtonContent>Primary theme color</DropDownButtonContent>
+                    <DropDownButtonContent>Default theme color</DropDownButtonContent>
 
                     <DropDownButtonItems>
                         <DropDownButtonItem Icon="@SvgIcon.Facebook">Facebook</DropDownButtonItem>
@@ -116,7 +133,7 @@
             </div>
             <div class="d-flex gap-2 mb-2">
                 <TelerikDropDownButton Icon="@SvgIcon.Share" ThemeColor="@ThemeConstants.Button.ThemeColor.Primary">
-                    <DropDownButtonContent>Secondary theme color</DropDownButtonContent>
+                    <DropDownButtonContent>Primary theme color</DropDownButtonContent>
 
                     <DropDownButtonItems>
                         <DropDownButtonItem Icon="@SvgIcon.Facebook">Facebook</DropDownButtonItem>
@@ -127,7 +144,7 @@
                 </TelerikDropDownButton>
 
                 <TelerikDropDownButton Icon="@SvgIcon.Share" ThemeColor="@ThemeConstants.Button.ThemeColor.Primary" Enabled="false">
-                    <DropDownButtonContent>Secondary theme color</DropDownButtonContent>
+                    <DropDownButtonContent>Primary theme color</DropDownButtonContent>
 
                     <DropDownButtonItems>
                         <DropDownButtonItem Icon="@SvgIcon.Facebook">Facebook</DropDownButtonItem>
@@ -139,7 +156,7 @@
             </div>
             <div class="d-flex gap-2 mb-2">
                 <TelerikDropDownButton Icon="@SvgIcon.Share" ThemeColor="@ThemeConstants.Button.ThemeColor.Secondary">
-                    <DropDownButtonContent>Tertiary theme color</DropDownButtonContent>
+                    <DropDownButtonContent>Secondary theme color</DropDownButtonContent>
 
                     <DropDownButtonItems>
                         <DropDownButtonItem Icon="@SvgIcon.Facebook">Facebook</DropDownButtonItem>
@@ -150,7 +167,7 @@
                 </TelerikDropDownButton>
 
                 <TelerikDropDownButton Icon="@SvgIcon.Share" ThemeColor="@ThemeConstants.Button.ThemeColor.Secondary" Enabled="false">
-                    <DropDownButtonContent>Tertiary theme color</DropDownButtonContent>
+                    <DropDownButtonContent>Secondary theme color</DropDownButtonContent>
 
                     <DropDownButtonItems>
                         <DropDownButtonItem Icon="@SvgIcon.Facebook">Facebook</DropDownButtonItem>
@@ -162,7 +179,7 @@
             </div>
             <div class="d-flex gap-2 mb-2">
                 <TelerikDropDownButton Icon="@SvgIcon.Share" ThemeColor="@ThemeConstants.Button.ThemeColor.Tertiary">
-                    <DropDownButtonContent>Share</DropDownButtonContent>
+                    <DropDownButtonContent>Tertiary theme color</DropDownButtonContent>
 
                     <DropDownButtonItems>
                         <DropDownButtonItem Icon="@SvgIcon.Facebook">Facebook</DropDownButtonItem>
@@ -173,7 +190,7 @@
                 </TelerikDropDownButton>
 
                 <TelerikDropDownButton Icon="@SvgIcon.Share" ThemeColor="@ThemeConstants.Button.ThemeColor.Tertiary" Enabled="false">
-                    <DropDownButtonContent>Share</DropDownButtonContent>
+                    <DropDownButtonContent>Tertiary theme color</DropDownButtonContent>
 
                     <DropDownButtonItems>
                         <DropDownButtonItem Icon="@SvgIcon.Facebook">Facebook</DropDownButtonItem>
@@ -184,6 +201,11 @@
                 </TelerikDropDownButton>
             </div>
         </CardBody>
+        <CardFooter>
+            <ul>
+                <li>Primary theme color is not right</li>
+            </ul>
+        </CardFooter>
     </TelerikCard>
 
     <TelerikCard>
@@ -243,6 +265,9 @@
                 <TelerikDateTimePicker Value="DateTime.Now" Width="20rem" />
                 <TelerikDateTimePicker Value="DateTime.Now" Width="20rem" Enabled="false" />
             </div>
+            <div class="d-flex gap-2 mb-2">
+                <TelerikCalendar />
+            </div>
         </CardBody>
     </TelerikCard>
 
@@ -264,6 +289,11 @@
                 <TelerikMultiSelect TItem="string" TValue="string" Data="@(new List<string> { "TelerikMultiSelect 1", "TelerikMultiSelect 2", "TelerikMultiSelect 3" })" Width="30rem" Enabled="false" />
             </div>
         </CardBody>
+        <CardFooter>
+            <ul>
+                <li>The multiselect cuts off the second row of pills. Should be high enough to accomodate 2 (or 1 and we make it the height we want)</li>
+            </ul>
+        </CardFooter>
     </TelerikCard>
     
     <TelerikCard>
@@ -339,6 +369,11 @@
                 </TabStripTab>
             </TelerikTabStrip>
         </CardBody>
+        <CardFooter>
+            <ul>
+                <li>This is properly broken. We had to use overrides in the Portal to make it render correctly, but the tabs are still not right.</li>
+            </ul>
+        </CardFooter>
     </TelerikCard>
 
     <TelerikCard>
