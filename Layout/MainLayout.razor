@@ -27,16 +27,8 @@
 </TelerikRootComponent>
 
 @code {
-    protected  override  async Task OnAfterRenderAsync(bool firstRender)
-    {
-        if (firstRender)
-        {
-            await JsInterop.InvokeVoidAsync("themeChanger.firstRender");
-        }
-    }
-  
     async Task ChangeTheme()
     {
-        await JsInterop.InvokeVoidAsync("themeChanger.changeCss", false);
+        await JsInterop.InvokeVoidAsync("themeChanger.changeCss");
     }
 }

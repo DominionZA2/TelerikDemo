@@ -1,16 +1,7 @@
 ﻿var themeChanger = {
-    firstRender: function () {
-        // Fix the media query string - remove spaces
-        window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', event => {
-            themeChanger.changeCss(true);
-        });
-
-        // Initialize theme based on system preference
-        this.changeCss(true);
-    },
-    changeCss: function (auto) {
-        var darkTheme = "https://blazor.cdn.telerik.com/blazor/7.0.0/kendo-theme-default/swatches/default-main.css";
-        var dayTheme = "css/aura-portal.css?ver=1";
+    changeCss: function () {
+        var telerikDefaultTheme = "https://blazor.cdn.telerik.com/blazor/7.0.0/kendo-theme-default/swatches/default-main.css";
+        var auraPortalTheme = "css/aura-portal.css";
         var oldLink = document.getElementById("TelerikThemeLink");
 
         // Check if oldLink exists, if not create initial link
@@ -19,21 +10,14 @@
             oldLink.setAttribute("id", "TelerikThemeLink");
             oldLink.setAttribute("rel", "stylesheet");
             oldLink.setAttribute("type", "text/css");
-            oldLink.setAttribute("href", dayTheme);
+            oldLink.setAttribute("href", auraPortalTheme);
             document.getElementsByTagName("head")[0].appendChild(oldLink);
         }
 
-        var newTheme;
-        if (auto) {
-            // Fix the media query string - remove spaces
-            newTheme = (window.matchMedia('(prefers-color-scheme: dark)').matches)
-                ? darkTheme
-                : dayTheme;
-        } else {
-            newTheme = (oldLink.getAttribute("href") === darkTheme)
-                ? dayTheme
-                : darkTheme;
-        }
+        // Simple toggle between themes
+        var newTheme = (oldLink.getAttribute("href") === telerikDefaultTheme)
+            ? auraPortalTheme
+            : telerikDefaultTheme;
 
         // Only create new link if theme is actually changing
         if (newTheme !== oldLink.getAttribute("href")) {
