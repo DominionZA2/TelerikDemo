@@ -1,0 +1,68 @@
+﻿@page "/panelbar"
+
+<PageTitle>Cosoft | Panelbar</PageTitle>
+
+<h1>Used for the Portal navigation panel</h1>
+
+<TelerikPanelBar Data="@PanelData">
+    <PanelBarBindings>
+        <PanelBarBinding TextField="Text" ItemsField="Items" />
+        <PanelBarBinding Level="1" TextField="Text" ItemsField="Items" />
+        <PanelBarBinding Level="2" TextField="Text" ItemsField="Items" />
+        <PanelBarBinding Level="3" TextField="Text" ItemsField="Items" />
+    </PanelBarBindings>
+</TelerikPanelBar>
+
+@code {
+    private List<PanelItem> PanelData { get; set; }
+
+    protected override void OnInitialized()
+    {
+        PanelData = new List<PanelItem>
+        {
+            new PanelItem { Text = "Root Item" },
+            new PanelItem
+            {
+                Text = "Root Item",
+                Items = new List<PanelItem>
+                {
+                    new PanelItem { Text = "Child Item Level 1" },
+                    new PanelItem
+                    {
+                        Text = "Child Item Level 1",
+                        Items = new List<PanelItem>
+                        {
+                            new PanelItem { Text = "Child Item Level 2" },
+                            new PanelItem
+                            {
+                                Text = "Child Item Level 2",
+                                Items = new List<PanelItem>
+                                {
+                                    new PanelItem { Text = "Child Item Level 3" },
+                                    new PanelItem
+                                    {
+                                        Text = "Child Item Level 3",
+                                        Items = new List<PanelItem>
+                                        {
+                                            new PanelItem { Text = "Child Item Level 4" }
+                                        }
+                                    },
+                                    new PanelItem { Text = "Child Item Level 3" }
+                                }
+                            },
+                            new PanelItem { Text = "Child Item Level 2" }
+                        }
+                    },
+                    new PanelItem { Text = "Child Item Level 1" }
+                }
+            },
+            new PanelItem { Text = "Root Item" }
+        };
+    }
+
+    public class PanelItem
+    {
+        public string Text { get; set; }
+        public List<PanelItem> Items { get; set; }
+    }
+}
