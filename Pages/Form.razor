@@ -4,26 +4,78 @@
 <PageTitle>Cosoft | Form</PageTitle>
 
 <h1>Form demo</h1>
-
 <ul>
     <li>Layout goes haywire on the Aura Portal theme. On default, it appears as intended.</li>
+    <li>Submit the form with valid data for a success message, then clear and submit again to see how the validation messages present.</li>
 </ul>
 
-<TelerikForm Model="@_formModel">
+<TelerikForm Model="@_formModel"
+             OnValidSubmit="@HandleValidSubmit"
+             OnInvalidSubmit="@HandleInvalidSubmit">
+    <FormValidation>
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+    </FormValidation>
     <FormItems>
         <FormItem Field="@nameof(FormModel.FirstName)" LabelText="First name" />
         <FormItem Field="@nameof(FormModel.LastName)" LabelText="Last name" />
         <FormItem Field="@nameof(FormModel.Phone)" LabelText="Phone" />
         <FormItem Field="@nameof(FormModel.Email)" LabelText="Email" />
+        <FormItem Field="@nameof(FormModel.Age)" LabelText="Age" />
+        <FormItem Field="@nameof(FormModel.Income)" LabelText="Annual Income" />
+        <FormItem Field="@nameof(FormModel.Birthdate)" LabelText="Birth Date" />
+        <FormItem Field="@nameof(FormModel.IsAlive)" LabelText="Is Active" />
     </FormItems>
+    <FormButtons>
+        <TelerikButton ButtonType="ButtonType.Button" OnClick="@HandleClear">Clear</TelerikButton>
+        <TelerikButton ButtonType="ButtonType.Submit" ThemeColor="@ThemeConstants.Button.ThemeColor.Primary">Submit</TelerikButton>
+    </FormButtons>
 </TelerikForm>
+
+@if (showSuccessMessage)
+{
+    <div class="alert alert-success mt-4">
+        Form submitted successfully!
+    </div>
+}
 
 @code {
     private FormModel _formModel = new FormModel
+        {
+            FirstName = "Joe",
+            LastName = "Doe",
+            Email = "joe@doe.there",
+            Phone = "10810",
+            Age = 30,
+            Income = 75000.00M,
+            Birthdate = new DateTime(1993, 1, 1),
+            IsAlive = true
+        };
+
+    private bool showSuccessMessage = false;
+
+    private async Task HandleValidSubmit()
     {
-        FirstName = "Joe",
-        LastName = "Doe",
-        Email = "joe@doe.there",
-        Phone = "10810"
-    };
+        showSuccessMessage = true;
+        await Task.Delay(2000); // Show success message for 2 seconds
+        showSuccessMessage = false;
+        StateHasChanged();
+    }
+
+    private void HandleInvalidSubmit()
+    {
+        showSuccessMessage = false;
+        // The form will automatically display validation messages
+    }
+
+    private void HandleClear()
+    {
+        _formModel = new FormModel
+            {
+                IsAlive = true,
+                Birthdate = DateTime.Today
+            };
+
+        showSuccessMessage = false;
+    }
 }
