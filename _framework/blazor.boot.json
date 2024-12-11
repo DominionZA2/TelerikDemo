@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "TelerikDemo",
   "resources": {
-    "hash": "sha256-d2uboW7aDwKn7L/WXc+BPk1cEom8QAgYXPK7UpuuhIA=",
+    "hash": "sha256-30DnIScI/xWtLrwlP1xXe///GVKW1DpSoGszAuKufKg=",
     "jsModuleNative": {
       "dotnet.native.8.0.11.n1sf6xr5tz.js": "sha256-VdKq87/z5NIxZKmuM+fv38XF+RcEb/bg3jVBwQSfwP4="
     },
@@ -18,8 +18,8 @@
     },
     "assembly": {
       "Microsoft.AspNetCore.Components.Forms.wasm": "sha256-n4Q92UW5jAwQgXBEimmLH0VyeGlqi+14Mv8QAqVqIQU=",
-      "Microsoft.AspNetCore.Components.wasm": "sha256-VbsRrFsPx2WbEysumZB/P4IYMankncuyHTlWudQ/pEg=",
-      "Microsoft.AspNetCore.Components.Web.wasm": "sha256-xthByT236QwT/pjTiaAECMmKJpJ+1D1kjU+WZWlPqyg=",
+      "Microsoft.AspNetCore.Components.wasm": "sha256-AczePCPY/5HFnTxcW/f/S+9Tzhk+tAIF6mEgdPaE+fs=",
+      "Microsoft.AspNetCore.Components.Web.wasm": "sha256-jO/SIKtU4Kg9f+lhkkCNYQqdcNiGuLJKtaqC3H6hshA=",
       "Microsoft.AspNetCore.Components.WebAssembly.wasm": "sha256-khQ0rmK9+Jp3cb+HntbsstfMB7HcRnCvtFoS6dCOQ9w=",
       "Microsoft.CSharp.wasm": "sha256-LVxB/T2PLmnRG+EuFdihOJsIU4Me0veOdCLnFeYRE1A=",
       "Microsoft.Extensions.Configuration.Abstractions.wasm": "sha256-87sn2TYqgdZ95sXmavjKEzoEfMgHnYQ9LOvnMX+aZcI=",
@@ -89,7 +89,7 @@
       "Telerik.Recurrence.wasm": "sha256-BobJ/SuwwVh5EUIl4arq8n97vgyONbqrnDww3Lt//DI=",
       "Telerik.SvgIcons.wasm": "sha256-XXBcUbm5YRfeSsEnr4ki1dgRJpX+bq0EB+O9pgVoEZc=",
       "Telerik.Zip.wasm": "sha256-DcUxSMlSQyLzEKNNSYvF8umaX3qaOG+IrUv2AvFKPds=",
-      "TelerikDemo.wasm": "sha256-fYOIktgwB4fPYLF5hq5TWNKkMuVhtlSWQKp11Twiz3M="
+      "TelerikDemo.wasm": "sha256-mi393paX2N6EmDIOd20Y2/Xw+uKSH8hun/3awuHeHSE="
     }
   },
   "cacheBootResources": true,
