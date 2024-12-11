@@ -1,6 +1,6 @@
 ﻿@page "/grid"
 
-<PageTitle>Telerik Blazor App | Weather</PageTitle>
+<PageTitle>Cosoft | Grid</PageTitle>
 
 <h1>Weather</h1>
 
@@ -22,9 +22,10 @@ else
             <GridColumn Field="TemperatureF" Title="Temp. (F)" />
             <GridColumn Field="Summary" Title="Summary" />
             <GridCommandColumn>
-                <GridCommandButton Command="Button1" Icon="@SvgIcon.EditAnnotations" OnClick="@((GridCommandEventArgs args) => Button1Click(args))">1</GridCommandButton>
-                <GridCommandButton Command="Button2" Icon="@SvgIcon.FileAdd" OnClick="@((GridCommandEventArgs args) => Button2Click(args))">2</GridCommandButton>
-                <GridCommandButton Command="Button3" Icon="@SvgIcon.TableDelete" OnClick="@((GridCommandEventArgs args) => Button3Click(args))">3</GridCommandButton>
+                <GridCommandButton Icon="@SvgIcon.Pencil" OnClick="@((GridCommandEventArgs args) => Button1Click(args))" Title="This is the default tooltip appearance">1</GridCommandButton>
+                <GridCommandButton Icon="@SvgIcon.StickyNote" OnClick="@((GridCommandEventArgs args) => Button2Click(args))" Title="This is the default tooltip appearance">2</GridCommandButton>
+                <GridCommandButton Icon="@SvgIcon.TableDelete" OnClick="@((GridCommandEventArgs args) => Button3Click(args))" Title="This is the default tooltip appearance">3</GridCommandButton>
+                <GridCommandButton Icon="@SvgIcon.TableDelete" OnClick="@((GridCommandEventArgs args) => Button3Click(args))" Title="This is the default tooltip appearance for a disabled button" Enabled="false">3D</GridCommandButton>
             </GridCommandColumn>
         </GridColumns>
     </TelerikGrid>
