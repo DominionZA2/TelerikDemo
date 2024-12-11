@@ -6,8 +6,6 @@
 
 <p>Welcome to your new app.</p>
 
-<p>This project was created in VS2022 using the Telerik Blazor project template. Only CSS used besides the Aura-Portal.css style is for layout.</p>
-
 <div class="k-d-flex k-flex-col k-gap-2">
     <TelerikCard>
         <CardHeader>
@@ -16,9 +14,19 @@
         <CardBody>
             <div class="k-flex k-gap-4 k-mb-4">
                 <TelerikButton>Default theme</TelerikButton>
+                <TelerikButton Enabled="false">Default theme disabled</TelerikButton>
+            </div>
+            <div class="k-flex k-gap-4 k-mb-4">
                 <TelerikButton ThemeColor="@ThemeConstants.Button.ThemeColor.Primary">Primary theme color</TelerikButton>
+                <TelerikButton ThemeColor="@ThemeConstants.Button.ThemeColor.Primary" Enabled="false">Primary theme color disabled</TelerikButton>
+            </div>
+            <div class="k-flex k-gap-4 k-mb-4">
                 <TelerikButton ThemeColor="@ThemeConstants.Button.ThemeColor.Secondary">Secondary theme color</TelerikButton>
+                <TelerikButton ThemeColor="@ThemeConstants.Button.ThemeColor.Secondary" Enabled="false">Secondary theme color disabled</TelerikButton>
+            </div>
+            <div class="k-flex k-gap-4 k-mb-4">
                 <TelerikButton ThemeColor="@ThemeConstants.Button.ThemeColor.Tertiary">Tertiary theme color</TelerikButton>
+                <TelerikButton ThemeColor="@ThemeConstants.Button.ThemeColor.Tertiary" Enabled="false">Tertiary theme color disabled</TelerikButton>
             </div>
         </CardBody>
     </TelerikCard>
@@ -30,7 +38,7 @@
         <CardBody>
             <div class="k-flex k-gap-4 k-mb-4">
                 <TelerikDropDownButton Icon="@SvgIcon.Share">
-                    <DropDownButtonContent>Share</DropDownButtonContent>
+                    <DropDownButtonContent>Primary theme color</DropDownButtonContent>
 
                     <DropDownButtonItems>
                         <DropDownButtonItem Icon="@SvgIcon.Facebook">Facebook</DropDownButtonItem>
@@ -39,9 +47,21 @@
                         <DropDownButtonItem Icon="@SvgIcon.Reddit">Reddit</DropDownButtonItem>
                     </DropDownButtonItems>
                 </TelerikDropDownButton>
+                
+                <TelerikDropDownButton Icon="@SvgIcon.Share" Enabled="false">
+                    <DropDownButtonContent>Primary theme color</DropDownButtonContent>
 
+                    <DropDownButtonItems>
+                        <DropDownButtonItem Icon="@SvgIcon.Facebook">Facebook</DropDownButtonItem>
+                        <DropDownButtonItem Icon="@SvgIcon.Twitter">Twitter</DropDownButtonItem>
+                        <DropDownButtonItem Icon="@SvgIcon.Linkedin">Linkedin</DropDownButtonItem>
+                        <DropDownButtonItem Icon="@SvgIcon.Reddit">Reddit</DropDownButtonItem>
+                    </DropDownButtonItems>
+                </TelerikDropDownButton>
+            </div>
+            <div class="k-flex k-gap-4 k-mb-4">
                 <TelerikDropDownButton Icon="@SvgIcon.Share" ThemeColor="@ThemeConstants.Button.ThemeColor.Primary">
-                    <DropDownButtonContent>Share</DropDownButtonContent>
+                    <DropDownButtonContent>Secondary theme color</DropDownButtonContent>
 
                     <DropDownButtonItems>
                         <DropDownButtonItem Icon="@SvgIcon.Facebook">Facebook</DropDownButtonItem>
@@ -50,8 +70,43 @@
                         <DropDownButtonItem Icon="@SvgIcon.Reddit">Reddit</DropDownButtonItem>
                     </DropDownButtonItems>
                 </TelerikDropDownButton>
+                
+                <TelerikDropDownButton Icon="@SvgIcon.Share" ThemeColor="@ThemeConstants.Button.ThemeColor.Primary" Enabled="false">
+                    <DropDownButtonContent>Secondary theme color</DropDownButtonContent>
 
+                    <DropDownButtonItems>
+                        <DropDownButtonItem Icon="@SvgIcon.Facebook">Facebook</DropDownButtonItem>
+                        <DropDownButtonItem Icon="@SvgIcon.Twitter">Twitter</DropDownButtonItem>
+                        <DropDownButtonItem Icon="@SvgIcon.Linkedin">Linkedin</DropDownButtonItem>
+                        <DropDownButtonItem Icon="@SvgIcon.Reddit">Reddit</DropDownButtonItem>
+                    </DropDownButtonItems>
+                </TelerikDropDownButton>
+            </div>
+            <div class="k-flex k-gap-4 k-mb-4">
                 <TelerikDropDownButton Icon="@SvgIcon.Share" ThemeColor="@ThemeConstants.Button.ThemeColor.Secondary">
+                    <DropDownButtonContent>Tertiary theme color</DropDownButtonContent>
+
+                    <DropDownButtonItems>
+                        <DropDownButtonItem Icon="@SvgIcon.Facebook">Facebook</DropDownButtonItem>
+                        <DropDownButtonItem Icon="@SvgIcon.Twitter">Twitter</DropDownButtonItem>
+                        <DropDownButtonItem Icon="@SvgIcon.Linkedin">Linkedin</DropDownButtonItem>
+                        <DropDownButtonItem Icon="@SvgIcon.Reddit">Reddit</DropDownButtonItem>
+                    </DropDownButtonItems>
+                </TelerikDropDownButton>
+                
+                <TelerikDropDownButton Icon="@SvgIcon.Share" ThemeColor="@ThemeConstants.Button.ThemeColor.Secondary" Enabled="false">
+                    <DropDownButtonContent>Tertiary theme color</DropDownButtonContent>
+
+                    <DropDownButtonItems>
+                        <DropDownButtonItem Icon="@SvgIcon.Facebook">Facebook</DropDownButtonItem>
+                        <DropDownButtonItem Icon="@SvgIcon.Twitter">Twitter</DropDownButtonItem>
+                        <DropDownButtonItem Icon="@SvgIcon.Linkedin">Linkedin</DropDownButtonItem>
+                        <DropDownButtonItem Icon="@SvgIcon.Reddit">Reddit</DropDownButtonItem>
+                    </DropDownButtonItems>
+                </TelerikDropDownButton>
+            </div>
+            <div class="k-flex k-gap-4 k-mb-4">
+                <TelerikDropDownButton Icon="@SvgIcon.Share" ThemeColor="@ThemeConstants.Button.ThemeColor.Tertiary">
                     <DropDownButtonContent>Share</DropDownButtonContent>
 
                     <DropDownButtonItems>
@@ -61,8 +116,8 @@
                         <DropDownButtonItem Icon="@SvgIcon.Reddit">Reddit</DropDownButtonItem>
                     </DropDownButtonItems>
                 </TelerikDropDownButton>
-
-                <TelerikDropDownButton Icon="@SvgIcon.Share" ThemeColor="@ThemeConstants.Button.ThemeColor.Tertiary">
+                
+                <TelerikDropDownButton Icon="@SvgIcon.Share" ThemeColor="@ThemeConstants.Button.ThemeColor.Tertiary" Enabled="false">
                     <DropDownButtonContent>Share</DropDownButtonContent>
 
                     <DropDownButtonItems>
