@@ -8,13 +8,13 @@
 
 <p>This project was created in VS2022 using the Telerik Blazor project template. Only CSS used besides the Aura-Portal.css style is for layout.</p>
 
-<div class="k-d-flex k-flex-col k-gap-2">
+<div class="d-flex flex-column gap-2">
     <TelerikCard>
         <CardHeader>
             <CardTitle>Button</CardTitle>
         </CardHeader>
         <CardBody>
-            <div class="k-flex k-gap-4 k-mb-4">
+            <div class="d-flex gap-2 mb-2">
                 <TelerikButton>Default theme</TelerikButton>
                 <TelerikButton ThemeColor="@ThemeConstants.Button.ThemeColor.Primary">Primary theme color</TelerikButton>
                 <TelerikButton ThemeColor="@ThemeConstants.Button.ThemeColor.Secondary">Secondary theme color</TelerikButton>
@@ -28,7 +28,7 @@
             <CardTitle>Dropdown Button</CardTitle>
         </CardHeader>
         <CardBody>
-            <div class="k-flex k-gap-4 k-mb-4">
+            <div class="d-flex gap-2 mb-2">
                 <TelerikDropDownButton Icon="@SvgIcon.Share">
                     <DropDownButtonContent>Share</DropDownButtonContent>
 
@@ -81,7 +81,7 @@
             <CardTitle>Inputs</CardTitle>
         </CardHeader>
         <CardBody>
-            <div class="k-flex k-gap-4 k-mb-4">
+            <div class="d-flex gap-2 mb-2">
                 <TelerikTextBox Value="TelerikTextBox" Width="12rem" />
                 <TelerikNumericTextBox T="decimal" Value="1.234567M" Width="12rem" />
                 <TelerikMaskedTextBox Value="TelerikMaskedTextBox" Width="12rem" />
@@ -99,7 +99,7 @@
             <CardTitle>Date inputs</CardTitle>
         </CardHeader>
         <CardBody>
-            <div class="k-flex k-gap-4 k-mb-4">
+            <div class="d-flex gap-2 mb-2">
                 <TelerikDatePicker Value="DateTime.Now" Width="20rem" />
                 <TelerikTimePicker Value="DateTime.Now" Width="20rem" />
                 <TelerikDateTimePicker Value="DateTime.Now" Width="20rem" />
@@ -112,7 +112,7 @@
             <CardTitle>Dropdowns</CardTitle>
         </CardHeader>
         <CardBody>
-            <div class="k-flex k-gap-4 k-mb-4">
+            <div class="d-flex gap-2 mb-2">
                 <TelerikDropDownList TItem="string" TValue="string" Data="@(new List<string> { "TelerikDropDownList 1", "TelerikDropDownList 2", "TelerikDropDownList 3" })" Width="20rem" />
                 <TelerikComboBox TItem="string" TValue="string" Data="@(new List<string> { "TelerikComboBox 1", "TelerikComboBox 2", "TelerikComboBox 3" })" Width="20rem" />
                 <TelerikMultiSelect TItem="string" TValue="string" Data="@(new List<string> { "TelerikMultiSelect 1", "TelerikMultiSelect 2", "TelerikMultiSelect 3" })" Width="30rem" />
