@@ -33,6 +33,30 @@
 
     <TelerikCard>
         <CardHeader>
+            <CardTitle>Chip button</CardTitle>
+        </CardHeader>
+        <CardBody>
+            <div class="k-flex k-gap-4 k-mb-4">
+                <TelerikChip>Default theme</TelerikChip>
+                <TelerikChip Disabled="true">Default theme disabled</TelerikChip>
+            </div>
+            <div class="k-flex k-gap-4 k-mb-4">
+                <TelerikChip ThemeColor="@ThemeConstants.Button.ThemeColor.Primary">Primary theme color</TelerikChip>
+                <TelerikChip ThemeColor="@ThemeConstants.Button.ThemeColor.Primary" Disabled="true">Primary theme color disabled</TelerikChip>
+            </div>
+            <div class="k-flex k-gap-4 k-mb-4">
+                <TelerikChip ThemeColor="@ThemeConstants.Button.ThemeColor.Secondary">Secondary theme color</TelerikChip>
+                <TelerikChip ThemeColor="@ThemeConstants.Button.ThemeColor.Secondary" Disabled="true">Secondary theme color disabled</TelerikChip>
+            </div>
+            <div class="k-flex k-gap-4 k-mb-4">
+                <TelerikChip ThemeColor="@ThemeConstants.Button.ThemeColor.Tertiary">Tertiary theme color</TelerikChip>
+                <TelerikChip ThemeColor="@ThemeConstants.Button.ThemeColor.Tertiary" Disabled="true">Tertiary theme color disabled</TelerikChip>
+            </div>
+        </CardBody>
+    </TelerikCard>
+
+    <TelerikCard>
+        <CardHeader>
             <CardTitle>Dropdown Button</CardTitle>
         </CardHeader>
         <CardBody>
@@ -47,7 +71,7 @@
                         <DropDownButtonItem Icon="@SvgIcon.Reddit">Reddit</DropDownButtonItem>
                     </DropDownButtonItems>
                 </TelerikDropDownButton>
-                
+
                 <TelerikDropDownButton Icon="@SvgIcon.Share" Enabled="false">
                     <DropDownButtonContent>Primary theme color</DropDownButtonContent>
 
@@ -70,7 +94,7 @@
                         <DropDownButtonItem Icon="@SvgIcon.Reddit">Reddit</DropDownButtonItem>
                     </DropDownButtonItems>
                 </TelerikDropDownButton>
-                
+
                 <TelerikDropDownButton Icon="@SvgIcon.Share" ThemeColor="@ThemeConstants.Button.ThemeColor.Primary" Enabled="false">
                     <DropDownButtonContent>Secondary theme color</DropDownButtonContent>
 
@@ -93,7 +117,7 @@
                         <DropDownButtonItem Icon="@SvgIcon.Reddit">Reddit</DropDownButtonItem>
                     </DropDownButtonItems>
                 </TelerikDropDownButton>
-                
+
                 <TelerikDropDownButton Icon="@SvgIcon.Share" ThemeColor="@ThemeConstants.Button.ThemeColor.Secondary" Enabled="false">
                     <DropDownButtonContent>Tertiary theme color</DropDownButtonContent>
 
@@ -116,7 +140,7 @@
                         <DropDownButtonItem Icon="@SvgIcon.Reddit">Reddit</DropDownButtonItem>
                     </DropDownButtonItems>
                 </TelerikDropDownButton>
-                
+
                 <TelerikDropDownButton Icon="@SvgIcon.Share" ThemeColor="@ThemeConstants.Button.ThemeColor.Tertiary" Enabled="false">
                     <DropDownButtonContent>Share</DropDownButtonContent>
 
@@ -210,7 +234,7 @@
             </div>
         </CardBody>
     </TelerikCard>
-    
+
     <TelerikCard>
         <CardHeader>
             <CardTitle>Tab control. Tabs should be horizontal.</CardTitle>
@@ -223,7 +247,7 @@
                         <p>AI is the simulation of human intelligence by machines programmed to think and learn like humans[3].</p>
                     </Content>
                 </TabStripTab>
-                
+
                 <TabStripTab Title="Disabled" Disabled="true">
                     <Content>
                         <h3>What is Artificial Intelligence?</h3>
