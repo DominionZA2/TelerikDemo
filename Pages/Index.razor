@@ -2,6 +2,15 @@
 
 <PageTitle>Telerik Blazor Demo App</PageTitle>
 
-<h1>Cosoft</h1>
+<h1>Cosoft Theme Demo</h1>
 
-<p>Select components or grid to view various Telerik components using the Aura theme.</p>
+<ul>
+    <li>Toggle theme button at top right will toggle between the theme exported from the Telerik themebuilder (Aura), and the default Telerik theme (Default).</li>
+</ul>
+
+<h5>Notes</h5>
+<ul>
+    <li>Initially k- CSS classes were used for layout. It was discovered when toggling between Default and Aura that the layout changed completed. When I swapped out to the bootstrap equivalent, the layout remained consistent. This highlights a potential problem in the portal as we have made use of k- classes. They seem to map 1-1 with bootstrap so it should be a straight forward fix. I suggest going forward we use Bootstrap 5+ CSS for layout, and Kendo classes for design.</li>
+    <li>The tabcontrol and form are both wrong in the theme designer, so what we see here is expected. There is no fault with export there.</li>
+    <li>For clarity going forward, I think we need to define "default, primary, secondary and tertiary" and use this everywhere. This will mainly apply to the various buttons. If we see a variable with the name primary in figma, we should expect to be able to apply the primary theme constant to the telerik control. Same applies for no variable, secondary and tertiary.</li>
+</ul>
