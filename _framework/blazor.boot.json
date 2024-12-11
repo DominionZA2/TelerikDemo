@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "TelerikDemo",
   "resources": {
-    "hash": "sha256-64KV52gETQ+3TPX4tby1lRqKlKySThxD77BmPvFBvRI=",
+    "hash": "sha256-aBgWw1sQ6UzHjiGCNldvfnK0HaQ7yrhvUQ/V2bGcYIQ=",
     "jsModuleNative": {
       "dotnet.native.8.0.11.n1sf6xr5tz.js": "sha256-VdKq87/z5NIxZKmuM+fv38XF+RcEb/bg3jVBwQSfwP4="
     },
@@ -89,7 +89,7 @@
       "Telerik.Recurrence.wasm": "sha256-BobJ/SuwwVh5EUIl4arq8n97vgyONbqrnDww3Lt//DI=",
       "Telerik.SvgIcons.wasm": "sha256-XXBcUbm5YRfeSsEnr4ki1dgRJpX+bq0EB+O9pgVoEZc=",
       "Telerik.Zip.wasm": "sha256-DcUxSMlSQyLzEKNNSYvF8umaX3qaOG+IrUv2AvFKPds=",
-      "TelerikDemo.wasm": "sha256-2Amc0M8MhISRE7RvhypQ+3R0Qr1xG0onu8fI5JRPh7Q="
+      "TelerikDemo.wasm": "sha256-lTdgNKQfQEn206jypHi/3XiApBfrQVZzVAu7bxVf1lw="
     }
   },
   "cacheBootResources": true,
