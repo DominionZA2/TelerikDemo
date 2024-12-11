@@ -156,8 +156,15 @@
         <CardBody>
             <div class="k-flex k-gap-4 k-mb-4">
                 <TelerikDatePicker Value="DateTime.Now" Width="20rem" />
+                <TelerikDatePicker Value="DateTime.Now" Width="20rem" Enabled="false" />
+            </div>
+            <div class="k-flex k-gap-4 k-mb-4">
                 <TelerikTimePicker Value="DateTime.Now" Width="20rem" />
+                <TelerikTimePicker Value="DateTime.Now" Width="20rem" Enabled="false" />
+            </div>
+            <div class="k-flex k-gap-4 k-mb-4">
                 <TelerikDateTimePicker Value="DateTime.Now" Width="20rem" />
+                <TelerikDateTimePicker Value="DateTime.Now" Width="20rem" Enabled="false" />
             </div>
         </CardBody>
     </TelerikCard>
@@ -169,8 +176,15 @@
         <CardBody>
             <div class="k-flex k-gap-4 k-mb-4">
                 <TelerikDropDownList TItem="string" TValue="string" Data="@(new List<string> { "TelerikDropDownList 1", "TelerikDropDownList 2", "TelerikDropDownList 3" })" Width="20rem" />
+                <TelerikDropDownList TItem="string" TValue="string" Data="@(new List<string> { "TelerikDropDownList 1", "TelerikDropDownList 2", "TelerikDropDownList 3" })" Width="20rem" Enabled="false" />
+            </div>
+            <div class="k-flex k-gap-4 k-mb-4">
                 <TelerikComboBox TItem="string" TValue="string" Data="@(new List<string> { "TelerikComboBox 1", "TelerikComboBox 2", "TelerikComboBox 3" })" Width="20rem" />
+                <TelerikComboBox TItem="string" TValue="string" Data="@(new List<string> { "TelerikComboBox 1", "TelerikComboBox 2", "TelerikComboBox 3" })" Width="20rem" Enabled="false" />
+            </div>
+            <div class="k-flex k-gap-4 k-mb-4">
                 <TelerikMultiSelect TItem="string" TValue="string" Data="@(new List<string> { "TelerikMultiSelect 1", "TelerikMultiSelect 2", "TelerikMultiSelect 3" })" Width="30rem" />
+                <TelerikMultiSelect TItem="string" TValue="string" Data="@(new List<string> { "TelerikMultiSelect 1", "TelerikMultiSelect 2", "TelerikMultiSelect 3" })" Width="30rem" Enabled="false" />
             </div>
         </CardBody>
     </TelerikCard>
@@ -182,6 +196,13 @@
         <CardBody>
             <TelerikTabStrip>
                 <TabStripTab Title="AI Basics">
+                    <Content>
+                        <h3>What is Artificial Intelligence?</h3>
+                        <p>AI is the simulation of human intelligence by machines programmed to think and learn like humans[3].</p>
+                    </Content>
+                </TabStripTab>
+                
+                <TabStripTab Title="Disabled" Disabled="true">
                     <Content>
                         <h3>What is Artificial Intelligence?</h3>
                         <p>AI is the simulation of human intelligence by machines programmed to think and learn like humans[3].</p>
