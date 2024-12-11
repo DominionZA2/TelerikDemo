@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "TelerikDemo",
   "resources": {
-    "hash": "sha256-d7Gp+e6C42MmfTpRb6UKsAd7M5Y8qez7MpzsJBbpFtQ=",
+    "hash": "sha256-q80gMRSR8+/aBkXsw0bGDQlfrsVwVLVcdx0U0drJNBc=",
     "jsModuleNative": {
       "dotnet.native.8.0.11.n1sf6xr5tz.js": "sha256-VdKq87/z5NIxZKmuM+fv38XF+RcEb/bg3jVBwQSfwP4="
     },
@@ -58,7 +58,7 @@
       "System.Net.Primitives.wasm": "sha256-GtynZfQX9xc6KcD2sn3ncEMi2FNGKgKljAX6RbyrHjg=",
       "System.Net.WebClient.wasm": "sha256-s1wOA5aAychsNoUiiUNKqqhY72TVHqz1JZM2tRfXDgE=",
       "System.ObjectModel.wasm": "sha256-0gd33/pLc+/6AVkoigD12Bj7K19q3HDt2k0NDZpMp6w=",
-      "System.Private.CoreLib.wasm": "sha256-1JPzuxnRLBeN8Dv5qldjZCIamnPqs++0Kpff8Yf+Cvo=",
+      "System.Private.CoreLib.wasm": "sha256-To8TX0SoR7+hsaDeu+i6zBEgw/m04oKiYOt57wsRaQQ=",
       "System.Private.Uri.wasm": "sha256-M2iZgRVE3T/k7Ot5oxn/edcfh2c4oHSNt1KhSQUdkTk=",
       "System.Private.Xml.Linq.wasm": "sha256-vOMR2RZf8Rth2qGU1pTFG6W4u1UNtHjVBrD8jHL/Hw4=",
       "System.Private.Xml.wasm": "sha256-t4TN11de8AZoxUGVD4xRFvggniu+QyvHJ+wVrxIID00=",
@@ -71,7 +71,7 @@
       "System.Runtime.Numerics.wasm": "sha256-0NXR0i/rGbrpZteYbKMU40xYs4CAh/nd/Id17a7Msqc=",
       "System.Runtime.Serialization.Formatters.wasm": "sha256-V4cTN96QE4Ax8kxrRat8H+xPao5wKV7sV3JcdGu133s=",
       "System.Runtime.Serialization.Primitives.wasm": "sha256-dX5/Tj+O+wCkFcythbpxhPR6kSYOeV5vMw7kpDk6DGY=",
-      "System.Runtime.wasm": "sha256-mD1BqBwnbC/7Qn5ixYvb6zGez0DJqUq229X8jrKSEoE=",
+      "System.Runtime.wasm": "sha256-Yy2FvF0apybp9rt0G02j8kp41tbMeWCm3G8e4s9VbWQ=",
       "System.Security.Cryptography.wasm": "sha256-/dIiKH5jcy19hyv62K5roYoCsL+yFAjq5mnWHG4ZIvQ=",
       "System.Text.Encodings.Web.wasm": "sha256-Eq+TOED4xgKQTWKS82ya/h1BOhJ9CymWZesbhFf0aqc=",
       "System.Text.Json.wasm": "sha256-zNlxhG2TAaO6fD5CjPS2LlfvSTGmoWiJkvPd0NqYV5w=",
@@ -89,7 +89,7 @@
       "Telerik.Recurrence.wasm": "sha256-BobJ/SuwwVh5EUIl4arq8n97vgyONbqrnDww3Lt//DI=",
       "Telerik.SvgIcons.wasm": "sha256-XXBcUbm5YRfeSsEnr4ki1dgRJpX+bq0EB+O9pgVoEZc=",
       "Telerik.Zip.wasm": "sha256-DcUxSMlSQyLzEKNNSYvF8umaX3qaOG+IrUv2AvFKPds=",
-      "TelerikDemo.wasm": "sha256-/4XpemiVzZNZFAGshF7RdIVZ1oS4Lgn3t1UyRHlg+w4="
+      "TelerikDemo.wasm": "sha256-LVxHas0Ml8+M8CusbgwWnZqOhkJ5ADPeLnMmc8jVJgg="
     }
   },
   "cacheBootResources": true,
