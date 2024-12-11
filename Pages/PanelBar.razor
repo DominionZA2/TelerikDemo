@@ -1,4 +1,5 @@
 ﻿@page "/panelbar"
+@using TelerikDemo.Models
 
 <PageTitle>Cosoft | Panelbar</PageTitle>
 
@@ -56,11 +57,5 @@
             },
             new PanelItem { Text = "Root Item" }
         };
-    }
-
-    public class PanelItem
-    {
-        public string Text { get; set; }
-        public List<PanelItem> Items { get; set; }
     }
 }
