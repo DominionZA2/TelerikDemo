@@ -5,12 +5,14 @@
 <h1>Cosoft Theme Demo</h1>
 
 <ul>
-    <li>Toggle theme button at top right will toggle between the theme exported from the Telerik themebuilder (Aura), and the default Telerik theme (Default).</li>
+    <li>Toggle theme button at top right will toggle between the theme exported from the Telerik themebuilder (Aura), and the default Telerik theme (Default). This helps to see how it should look , and how our theme implements it.</li>
 </ul>
 
 <h5>Notes</h5>
 <ul>
-    <li>Initially k- CSS classes were used for layout. It was discovered when toggling between Default and Aura that the layout changed completed. When I swapped out to the bootstrap equivalent, the layout remained consistent. This highlights a potential problem in the portal as we have made use of k- classes. They seem to map 1-1 with bootstrap so it should be a straight forward fix. I suggest going forward we use Bootstrap 5+ CSS for layout, and Kendo classes for design.</li>
-    <li>The tabcontrol and form are both wrong in the theme designer, so what we see here is expected. There is no fault with export there.</li>
+    <li>Initially k- CSS classes were used for layout. It was discovered when toggling between Default and Aura that the layout changed completed. When I swapped out to the bootstrap equivalent, the layout remained consistent. This highlights a potential problem in the portal as we have made use of k- classes for layout. They seem to map 1-1 with bootstrap so it should be a straight forward fix. I suggest going forward we use Bootstrap 5+ CSS for layout, and Kendo classes for design.</li>
+    <li>The controls are rendering in this sample app as they are displayed in the theme designer. I therefore don't currently (might discover more) think that we have fault between what we see in the theme designer, and what renders in the Portal.</li>
     <li>For clarity going forward, I think we need to define "default, primary, secondary and tertiary" and use this everywhere. This will mainly apply to the various buttons. If we see a variable with the name primary in figma, we should expect to be able to apply the primary theme constant to the telerik control. Same applies for no variable, secondary and tertiary.</li>
+    <li>In the theme designer, there is a way to hook it up to Figma. I think we should explore this as it could remove potential human error in the mapping process. For example: The tabcontrol looks great in Figma, not in the theme designer, exports as broken, and we override it in the Portal to make it display - okay. Maybe the integration to figma would mean what is designed is what we get... Will explore this more.</li>
+    <li>The theme file is applying the initial site properties properly it seems as the fonts are working (please check) when the Aura theme is active, but not otherwise. This shows the fonts are working from the theme file and we don't need to do these overrides in the Portal app.css anymore.</li>
 </ul>
